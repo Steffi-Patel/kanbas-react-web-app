@@ -1,0 +1,83 @@
+/* Styles for .wd-sidebar */
+.wd-sidebar {
+   background-color: black;
+   width: 85px; 
+   justify-content: flex-start; 
+}
+
+.wd-sidebar a {
+   display: flex;
+   flex-direction: column; /* Stacks icon above text */
+   align-items: center; /* Centers items horizontally */
+   color: white;
+   background-color: black;
+   padding: 5px; 
+   margin: 5px;
+   text-decoration: none;
+}
+
+.wd-sidebar a:hover, .wd-sidebar a.active {
+   background-color: white;
+   color: red;
+}
+
+/* Icon styling */
+.wd-sidebar i {
+   color: red;
+   margin-bottom: 5px; /* Space between icon and text */
+}
+
+/* Special color for Account icon */
+.wd-sidebar i.fa-user {
+   color: white;
+}
+
+/* Styles for .wd-secondbar */
+.wd-secondbar {
+   background-color: white;
+   width: 85px; 
+   justify-content: flex-start; 
+}
+
+.wd-secondbar a {
+   display: flex;
+   flex-direction: column; /* Stacks icon above text */
+   align-items: left; /* Centers items horizontally */
+   color: red;
+   background-color: white;
+   padding: 5px; 
+   margin: 5px; 
+   text-decoration: none;
+}
+
+.wd-secondbar a:hover, .wd-secondbar a.active {
+   background-color: red;
+   color: white;
+}
+
+/* Icon styling for wd-secondbar */
+.wd-secondbar i {
+   color: red;
+   margin-bottom: 5px; /* Space between icon and text */
+}
+
+
+/* Light grey background for tables and buttons */
+.table-light, .btn-light {
+   background-color: #f7f7f7;
+}
+
+/* Green border on the left of table rows */
+.border-left-green {
+   border-left: 20px solid green;
+}
+
+/* Link styling */
+.table a {
+   text-decoration: none;
+   color: grey; 
+}
+
+.table a:hover {
+   text-decoration: underline;
+}

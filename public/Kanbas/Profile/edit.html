@@ -3,123 +3,133 @@
 <head>
    <meta charset="UTF-8">
    <title>Title</title>
+   <link href="index.css"
+         rel="stylesheet"/>
+         <link href="index.css" rel="stylesheet" />
+         <link href="/vendors/bootstrap/bootstrap.min.css" rel="stylesheet" />
+         <link href="/vendors/fontawesome/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet" />
+         <link href="/vendors/fontawesome/fontawesome-free-5.15.4-web/css/all.min.css" rel="stylesheet"/>
+         <link href="/vendors/fontawesome/fontawesome-free-5.15.4-web/css/fontawesome.css" rel="stylesheet"/>
+         <link href="/vendors/fontawesome/fontawesome-free-6.4.2-web/css/all.css" rel="stylesheet"/>
+         <link href="/vendors/fontawesome/fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet"/>
+
 </head>
 <body>
-   <table width="100%"
-        <tr>
-            <td valign="top">
+    <div class="container-fluid"> 
+
+        <div class="row">
+
+            <div class="col-2 wd-sidebar">
+                
                 <ul>
-                    <li>
-                        <a href="/Kanbas/Profile/index.html">Account</a>
-                    </li>
-                    <li>
-                        <a href="#">Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="/Kanbas/Assignments/index.html">Courses</a>
-                    </li>
-                    <li>
-                        <a href="#">Calendar</a>
-                    </li>
-                    <li>
-                        <a href="#">Inbox</a>
-                    </li>
-                    <li>
-                        <a href="#">History</a>
-                    </li>
-                    <li>
-                        <a href="#">Studio</a>
-                    </li>
-                    <li>
-                        <a href="#">Commons</a>
-                    </li>
-                    <li>
-                        <a href="#">Help</a>
-                    </li>
+                    <a href="/Kanbas/Profile/index.html"><i class="fa fa-user" style="color: white"></i> Account</a>
+                    <a href="#"><i class="fa-solid fa-gauge" style="color: red"></i>Dashboard</a>
+                    <a href="/Kanbas/Settings/CourseDetail.html"><i class="fa-solid fa-book" style="color: red"></i>Courses</a>
+                    <a href="#"><i class="fa-solid fa-calendar-days" style="color: red"></i>Calendar</a>
+                    <a href="#"><i class="fa-solid fa-inbox"></i>Inbox</a>
+                    <a href="#"><i class="fa-solid fa-clock"></i>History</a>
+                    <a href="#"><i class="fa-solid fa-display"></i>Studio</a>
+                    <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>Commons</a>
+                    <a href="#"><i class="fa-regular fa-circle-question"></i>Help</a>
                 </ul>
-            </td>
-            <td valign="top">
+            </div>
+            <div class="col-2 wd-profilebar">
                 <ul>
-                    <li>
+                    
                         <a href="#">Notifications</a>
-                    </li>
-                    <li>
-                        <a href="/Kanbas/Profile/index.html">Profile</a>
-                    </li>
-                    <li>
+                    
+                    
+                        <a href="/Kanbas/Profile/index.html" class="active">Profile</a>
+                    
+                    
                         <a href="#">Files</a>
-                    </li>
-                    <li>
+                    
+                    
                         <a href="#">Settings</a>
-                    </li>
-                    <li>
+                    
+                    
                         <a href="#">ePortolios</a>
-                    </li>
-                    <li>
+                    
+                    
                         <a href="#">Shared Content</a>
-                    </li>
-                    <li>
+                    
+                    
                         <a href="#">The Hub</a>
-                    </li>
-                    <li>
+                    
+                    
                         <a href="#">Qwickly Course Tools</a>
-                    </li>
-                    <li>
+                    
+                    
                         <a href="#">Global Announcements</a>
-                    </li>
+                    
                 </ul>
-            </td>
-            <td valign="top">
+            </div>
+            <div class="col-5">
+                <i class="fa-solid fa-circle-user" style="font-size: 8em; color: grey"></i>
+
                 <h1>Steffi Patel</h1>
                 <form id="text-fields">
-                    <label for="text-fields-username">Name:*</label>
-                    <input id="text-fields-username" placeholder="Steffi Patel"/>
-                    <label for="text-fields-username">Pronouns:</label>
+                    <label for="text-fields-username">Name:*</label> <br/>
+                    <input type="text" id="text-fields-username" class="form-control" placeholder="Steffi Patel" />
+                    <br/>
+                    <label for="text-fields-username">Pronouns:</label> <br/>
                     <select><option selected value="She/Her"> She/Her</option>
                     </select>
-                    <br  />
-                    <p><label for="text-fields-title">Title:</label>
-                    <input id="text-fields-title"/></p>
+                    <br/>
+                    <br/>
+                    <p><label for="text-fields-title">Title:</label><br/>
+                    <input type="text" id="text-fields-username" class="form-control"/>
+                    </p>
                     <h3>Contact</h3>
-                    <label>No registered services, you can add some on the <a href="#"> settings</a> page</label>
+                    <label>No registered services, you can add some on the <a href="#" style="color: red; text-decoration: none;">settings</a> page</label>
                     <h3>Biography</h3>
-                    <label>Student, Software Engineer</label>
-                    <p><form id="textarea">
-                        <textarea cols="20" rows="4">
-                            Student, Software Engineer
-                        </textarea>
-                    </form></p>
+                    
+                    <form id="textarea">
+                        <textarea class="form-control" cols="20" rows="4" style="display: block; padding-left: 0; margin-left: 0;">Student, Software Engineer</textarea>
+                    </form>
+                    
+                    
                     <h3>Links</h3>
-                    <ul>
-                        <li><a href="https://github.com/Steffi-Patel/kanbas-react-web-app.git">Github -> links to an external site</a></li>
-                    </ul>
-                    <table>
-                        <td>
-                            <form><h5>Title</h5>
-                            <input id="text-fields-username" placeholder="Github"/></form>
-
-                            <form>
-                                <button type="button">Import</button>
-                                <form action="/Kanbas/Profile/index.html">
-                                    <button type="submit">Cancel</button> <button type="submit">Save Profile</button> 
-                                </form>
-                                <form action="/Kanbas/Profile/index.html">
-                                    <button type="submit">Edit Profile</button> <button type="submit">Cancel Editing</button> 
-                                </form>
-                            </form>
-                           
-                        </td>
-                        <td>
-                            <h5>URL</h5>
-                            <input id="text-fields-username" placeholder="https://github.com/Steffi-Patel/kanbas-react-web-app.git"/> <a href="#">Remove</a> 
-                        </td>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h5>Title</h5>
+                                <input type="text" class="form-control" id="text-fields-title" placeholder="Github" />
+                            </div>
+                    
+                            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
+                    
+                            <div class="col-md-5">
+                                <h5>URL</h5>
+                                <div class="d-flex align-items-center">
+                                    <input type="url" class="form-control" id="text-fields-url" placeholder="https://github.com/Steffi-Patel/kanbas-react-web-app.git" />
+                                    <i class="fa-solid fa-x ml-2" style="color: red;"></i> <!-- Red-colored X icon -->
+                                </div>
+                            </div>
+                        </div>
+                    
                         
-                    </table>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12 d-flex justify-content-end">
+                            <a href="/Kanbas/Profile/index.html" class="btn btn-light">Cancel</a>
+                            <a href="/Kanbas/Profile/index.html" class="btn btn-danger">Save Profile</a>
+                        </div>
+                    </div>
+                    
 
                 
-            </td>
-            </tr>
-        </table>
+                </div>
+                <div class="col">
+                    <form action="/Kanbas/Profile/index.html">
+                        <button type="submit" class="btn btn-lightgrey border float-end">
+                            <i class="fa-solid fa-pencil"></i> Cancel Editing
+                        </button> 
+                    </form>
+                </div>
+                
 
         
     </body>
