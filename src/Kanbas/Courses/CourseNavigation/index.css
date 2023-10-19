@@ -1,0 +1,32 @@
+/* Styles for .wd-secondbar */
+.wd-secondbar {
+   background-color: white;
+   width: 85px; 
+   justify-content: flex-start; 
+}
+
+.wd-secondbar a {
+   display: flex;
+   flex-direction: column; /* Stacks icon above text */
+   align-items: left; /* Centers items horizontally */
+   color: red;
+   background-color: white;
+   padding: 5px; 
+   margin: 5px; 
+   text-decoration: none;
+}
+
+.wd-secondbar a:hover, .wd-secondbar a.active {
+   background-color: red;
+   color: white;
+}
+
+/* Icon styling for wd-secondbar */
+.wd-secondbar i {
+   color: red;
+   margin-bottom: 5px; /* Space between icon and text */
+}
+
+.border-left-green {
+   border-left: 5px solid green;
+}

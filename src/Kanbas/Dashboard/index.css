@@ -1,0 +1,16 @@
+
+@media (max-width: 991px) and (min-width: 768px) {
+   /* For medium screens, 3 courses per row */
+   .course-card {
+       flex: 0 0 calc(33.33333% - 30px); /* width minus margin */
+       max-width: calc(33.33333% - 30px);
+   }
+}
+
+@media (max-width: 767px) {
+   /* For small screens, 2 courses per row */
+   .course-card {
+       flex: 0 0 calc(50% - 30px); /* width minus margin */
+       max-width: calc(50% - 30px);
+   }
+}

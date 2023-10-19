@@ -1,9 +1,26 @@
+import Labs from "./Labs"
+import HelloWorld from "./Labs/a3/HelloWorld";
+import Kanbas from "./Kanbas";
 import logo from './logo.svg';
 import './App.css';
+import {HashRouter} from "react-router-dom";
+import {Routes, Route, Navigate} from "react-router";
 
 function App() {
   return (
-    <div className="App">
+    <HashRouter>
+      <div>
+        <Routes>
+          <Route path="/"         element={<Navigate to="/Labs"/>}/>
+          <Route path="/hello"    element={<HelloWorld/>}/>
+          <Route path="/Labs/*"   element={<Labs/>}/>
+          <Route path="/Kanbas/*" element={<Kanbas/>}/>
+        </Routes>
+      </div>
+
+    </HashRouter>
+
+   /* <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,8 +35,8 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
-  );
+    </div> */
+  ); 
 }
 
 export default App;

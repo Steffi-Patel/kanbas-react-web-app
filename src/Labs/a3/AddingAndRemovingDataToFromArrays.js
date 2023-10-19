@@ -1,0 +1,19 @@
+let numberArray1 = [1, 2, 3, 4, 5];
+let stringArray1 = ['string1', 'string2'];
+
+numberArray1.push(6);         
+stringArray1.push('string3');
+numberArray1.splice(2, 1);    
+stringArray1.splice(1, 1);
+
+function AddingAndRemovingDataToFromArrays() {
+  return (
+    <div>
+      <h3>Add and remove data to arrays</h3>
+      <p>numberArray1 = {numberArray1.join("")}</p>
+      <p>stringArray1 = {stringArray1.join("")}</p>
+    </div>
+  );
+}
+
+export default AddingAndRemovingDataToFromArrays;

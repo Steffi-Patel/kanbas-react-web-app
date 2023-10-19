@@ -1,0 +1,24 @@
+
+
+.border-left-green {
+   border-left: 5px solid green;
+}
+
+.modules-container {
+   display: flex;
+   justify-content: flex-end; /* Align content to the right */
+ }
+ 
+ .toolbar {
+   margin-right: auto; /* Push the toolbar to the right */
+ }
+ .wd-modules {
+   display: flex;
+   align-items: start;
+   justify-content: flex-end; /* This ensures that even if the components have different heights, they start at the same vertical position. */
+ }
+
+ .course-page-container {
+   display: flex;
+ }
+ 

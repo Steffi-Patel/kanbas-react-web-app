@@ -1,0 +1,32 @@
+/* Styles for .wd-sidebar */
+.wd-sidebar {
+   background-color: black;
+   width: 85px;  
+   justify-content: flex-start;
+}
+
+.wd-sidebar a {
+   /* Stacks icon above text */
+   align-items: center; /* Centers items horizontally */
+   color: white;
+   background-color: black;
+   padding: 5px; /* You can adjust between 5px and 10px as needed */
+   margin: 5px; /* You can adjust between 5px and 10px as needed */
+   text-decoration: none;
+}
+
+.wd-sidebar a:hover, .wd-sidebar a.active {
+   background-color: white;
+   color: red;
+}
+
+/* Icon styling */
+.wd-sidebar i {
+   color: red;
+   margin-bottom: 5px; /* Space between icon and text */
+}
+
+.wd-flex-row-container {
+   display: flex;
+   flex-direction: row;
+}
