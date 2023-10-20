@@ -1,5 +1,4 @@
 import React from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
 import ModulesList from "../Modules/ModuleList";
 import { FaBan, FaCheckCircle, FaFileImport, FaUpload, FaHome, FaEye, FaBullhorn, FaChartBar, FaBell, FaCalendar } from "react-icons/fa";
 
@@ -20,73 +19,59 @@ function Home() {
             <FaCheckCircle className="text-white" /> Published
           </button>
         </div>
-        <ul className="list-group mb-4">
-          <li className="list-group-item bg-light">
-            <a href="#" className="text-dark text-decoration-none">
-              <FaFileImport /> Import Existing Content
-            </a>
-          </li>
-          <li className="list-group-item bg-light">
-            <a href="#" className="text-dark text-decoration-none">
-              <FaUpload /> Import From Commons
-            </a>
-          </li>
-          <li className="list-group-item bg-light">
-            <a href="#" className="text-dark text-decoration-none">
-              <FaHome /> Choose Home Page
-            </a>
-          </li>
-          <li className="list-group-item bg-light">
-            <a href="#" className="text-dark text-decoration-none">
-              <FaEye /> View Course Stream
-            </a>
-          </li>
-          <li className="list-group-item bg-light">
-            <a href="#" className="text-dark text-decoration-none">
-              <FaBullhorn /> New Announcements
-            </a>
-          </li>
-          <li className="list-group-item bg-light">
-            <a href="#" className="text-dark text-decoration-none">
-              <FaChartBar /> New Analytics
-            </a>
-          </li>
-          <li className="list-group-item bg-light">
-            <a href="#" className="text-dark text-decoration-none">
-              <FaBell /> View Course Notifications
-            </a>
-          </li>
-        </ul>
+        <div className="list-group mb-4">
+          <button className="list-group-item bg-light text-left border-0">
+            <FaFileImport /> Import Existing Content
+          </button>
+          <button className="list-group-item bg-light text-left border-0">
+            <FaUpload /> Import From Commons
+          </button>
+          <button className="list-group-item bg-light text-left border-0">
+            <FaHome /> Choose Home Page
+          </button>
+          <button className="list-group-item bg-light text-left border-0">
+            <FaEye /> View Course Stream
+          </button>
+          <button className="list-group-item bg-light text-left border-0">
+            <FaBullhorn /> New Announcements
+          </button>
+          <button className="list-group-item bg-light text-left border-0">
+            <FaChartBar /> New Analytics
+          </button>
+          <button className="list-group-item bg-light text-left border-0">
+            <FaBell /> View Course Notifications
+          </button>
+        </div>
 
         <h2 className="my-2">Coming Up</h2>
         <p className="mb-3 text-end">
           <FaCalendar />
-          <a href="#" className="btn btn-link text-danger text-decoration-none">
+          <button aria-label="View Calendar" className="btn btn-link text-danger border-0 p-0">
             View Calendar
-          </a>
+          </button>
         </p>
         <ul className="list-unstyled">
           <li className="mb-2">
             <FaCalendar />
-            <a href="#" className="text-danger text-decoration-none">
+            <button aria-label="View Lecture Details" className="text-danger border-0 bg-transparent p-0">
               Lecture
-            </a>{" "}
+            </button>
             <br />
             CS4550.12631.202410 Sep 7 at 11:45am
           </li>
           <li className="mb-2">
             <FaCalendar />
-            <a href="#" className="text-danger text-decoration-none">
+            <button aria-label="View Lecture Details" className="text-danger border-0 bg-transparent p-0">
               Lecture
-            </a>{" "}
+            </button>
             <br />
             CS4550.12631.202410 Sep 11 at 11:45am
           </li>
           <li>
             <FaCalendar />
-            <a href="#" className="text-danger text-decoration-none">
+            <button aria-label="View Lecture Details" className="text-danger border-0 bg-transparent p-0">
               Lecture
-            </a>{" "}
+            </button>
             <br />
             CS5610 06 SP23 Lecture Sep 11 at 6pm
           </li>

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
-
 function Dashboard() {
   const courses = [
     {
@@ -36,7 +35,7 @@ function Dashboard() {
         {courses.map((course) => (
           <div key={course._id} className="col-md-4 mb-4">
             <div className="card" style={{ width: "18rem" }}>
-              <img src="/images/course pic.jpg" className="card-img-top" alt="Course Image" />
+              <img src="/dashboardlogo/course pic.jpg" className="card-img-top" alt="Course" />
               <div className="card-body">
                 <h5 className="card-title">
                   <Link to={`/Kanbas/Courses/${course._id}`}>{course.name}</Link>

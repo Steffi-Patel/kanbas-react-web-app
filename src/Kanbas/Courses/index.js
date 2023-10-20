@@ -1,10 +1,9 @@
 // Courses.js
 import React from "react";
 import db from "../../Kanbas/Database";
-import { Routes, Route, useParams, Navigate, useLocation } from "react-router-dom";
+import { Routes, Route, useParams, Navigate} from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
-import CoursePage from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
@@ -12,7 +11,7 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 function Courses() {
   const { courseId } = useParams();
   const course = db.courses.find((course) => course._id === courseId);
-    const {pathname} = useLocation();
+    
 
   if (!course) {
     return <div>Course not found</div>;
