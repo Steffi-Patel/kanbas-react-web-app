@@ -1,16 +1,18 @@
-
-@media (max-width: 991px) and (min-width: 768px) {
-   /* For medium screens, 3 courses per row */
-   .course-card {
-       flex: 0 0 calc(33.33333% - 30px); /* width minus margin */
-       max-width: calc(33.33333% - 30px);
-   }
-}
-
-@media (max-width: 767px) {
-   /* For small screens, 2 courses per row */
-   .course-card {
-       flex: 0 0 calc(50% - 30px); /* width minus margin */
-       max-width: calc(50% - 30px);
-   }
-}
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .course-buttons {
+    display: flex;
+    align-items: end ;
+    gap: 8px;  /* Space between buttons */
+  }
+  
+  .course-input-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;  /* Space between input controls and course list */
+  }
+  

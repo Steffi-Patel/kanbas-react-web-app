@@ -1,49 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./index.css";
-function Dashboard() {
-  const courses = [
-    {
-      "_id": "RS101",
-      "name": "Rocket Propulsion",
-      "number": "RS4550",
-      "startDate": "2023-01-10",
-      "endDate": "2023-05-15"
-    },
-    {
-      "_id": "RS102",
-      "name": "Aerodynamics",
-      "number": "RS4560",
-      "startDate": "2023-01-10",
-      "endDate": "2023-05-15"
-    },
-    {
-      "_id": "RS103",
-      "name": "Spacecraft Design",
-      "number": "RS4570",
-      "startDate": "2023-01-10",
-      "endDate": "2023-05-15"
-    }
-  ];
+import db from "../Database";
+
+function Dashboard({ courses, course, setCourse, addNewCourse, deleteCourse, updateCourse, editCourse}) {
 
   return (
     <div>
       <h1>Dashboard</h1>
-      <h3>Published Courses ({courses.length})</h3>
-
-      <div className="row">
-        {courses.map((course) => (
-          <div key={course._id} className="col-md-4 mb-4">
-            <div className="card" style={{ width: "18rem" }}>
-              <img src="/dashboardlogo/course pic.jpg" className="card-img-top" alt="Course" />
-              <div className="card-body">
-                <h5 className="card-title">
-                  <Link to={`/Kanbas/Courses/${course._id}`}>{course.name}</Link>
-                </h5>
-                <p className="card-text">
-                  Term: Fall, Year: 2023, Section: A
-                </p>
-              </div>
+      <h2>Published Courses ({courses.length})</h2>
+      <div className="course-input-controls">
+        <input 
+            type="text" 
+            placeholder="Course Name" 
+            value={course.name} 
+            onChange={(e) => setCourse({ ...course, name: e.target.value })}
+        />
+        <input 
+            type="text" 
+            placeholder="Course Number" 
+            value={course.number} 
+            onChange={(e) => setCourse({ ...course, number: e.target.value })}
+        />
+        <input 
+            type="date" 
+            value={course.startDate} 
+            onChange={(e) => setCourse({ ...course, startDate: e.target.value })}
+        />
+        <input 
+            type="date" 
+            value={course.endDate} 
+            onChange={(e) => setCourse({ ...course, endDate: e.target.value })}
+        />
+        <button onClick={addNewCourse} className="btn btn-primary">Add</button>
+        <button onClick={updateCourse} className="btn btn-secondary">Update</button>
+      </div>
+      <div className="list-group">
+        {courses.map((courseItem) => (
+          <div key={courseItem._id} className="list-group-item">
+            <Link to={`/Kanbas/Courses/${courseItem._id}`}>{courseItem.name}</Link>
+            <div className="course-buttons">
+              <button onClick={() => editCourse(courseItem)} className="btn btn-warning btn-sm ml-2">Edit</button>
+              <button onClick={() => deleteCourse(courseItem._id)} className="btn btn-danger btn-sm ml-2">Delete</button>
             </div>
           </div>
         ))}

@@ -1,23 +1,67 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import db from "../../Database";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from "./modulesReducer";
 
-function ModulesList() {
+function ModuleList() {
   const { courseId } = useParams();
-
-  const modulesData = db.modules.filter((module) => module.course === courseId);
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
 
   return (
-    <div className="list-group border-left-green">
-      {modulesData.map((module) => (
-        <div key={module._id} className="list-group-item border-left-green">
-          <i className="fa-solid fa-ellipsis-vertical"></i>
-          <i className="fa-solid fa-ellipsis-vertical mr-2"></i>
-          {module.description} 
-        </div>
-      ))}
-    </div>
+    <ul className="list-group">
+      <li className="list-group-item">
+        <button
+          onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+          className="btn btn-success mr-2">
+          Add
+        </button>
+        <button
+          onClick={() => dispatch(updateModule(module))}
+          className="btn btn-primary mr-2">
+          Update
+        </button>
+        <input
+          value={module.name}
+          onChange={(e) =>
+            dispatch(setModule({ ...module, name: e.target.value }))
+          }
+          className="mr-2"
+        />
+        <textarea
+          value={module.description}
+          onChange={(e) =>
+            dispatch(setModule({ ...module, description: e.target.value }))
+          }
+        />
+      </li>
+      {modules
+        .filter((module) => module.course === courseId)
+        .map((module, index) => (
+          <li key={index} className="list-group-item">
+            <button
+              onClick={() => dispatch(setModule(module))}
+              className="btn btn-success mr-2">
+              Edit
+            </button>
+            <button
+              onClick={() => dispatch(deleteModule(module._id))}
+              className="btn btn-danger mr-2">
+              Delete
+            </button>
+            <h3>{module.name}</h3>
+            <p>{module.description}</p>
+            <p>{module._id}</p>
+          </li>
+        ))}
+    </ul>
   );
 }
 
-export default ModulesList;
+export default ModuleList;

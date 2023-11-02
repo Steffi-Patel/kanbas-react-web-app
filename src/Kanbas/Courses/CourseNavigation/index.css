@@ -7,7 +7,7 @@
 
 .wd-secondbar a {
    display: flex;
-   flex-direction: column; /* Stacks icon above text */
+   flex-direction: column; 
    align-items: left; /* Centers items horizontally */
    color: red;
    background-color: white;
