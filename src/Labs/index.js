@@ -1,8 +1,8 @@
 import Nav from "../Nav";
-import Assignment3 from "./a3";
+import Assignment3 from "../Labs/a3";
 import Assignment4 from "./a4";
 import {Routes, Route, Navigate} from "react-router";
-import store from "./store";
+import store from "../Labs/store";
 import { Provider } from "react-redux";
 
 
