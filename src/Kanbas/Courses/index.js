@@ -25,7 +25,7 @@ function Courses() {
 
  useEffect(() => {
    findCourseById(courseId);
- }, [courseId, URL]);
+ }, [courseId, URL, findCourseById]);
 
   return (
     <div className="wd-flex-row-container">
