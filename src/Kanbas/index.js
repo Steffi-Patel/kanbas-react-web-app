@@ -17,7 +17,7 @@ function Kanbas() {
   });
 
  //const URL = "http://localhost:4000/api/courses";
-  const URL = `${process.env.REACT_APP_BASE_URL}/courses`;
+  const URL = `${process.env.REACT_APP_BASE_URL}/api/courses`;
 
   // Fetch courses from server
   useEffect(() => {

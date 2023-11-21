@@ -11,7 +11,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 function Courses() {
-  const URL = `${process.env.REACT_APP_BASE_URL}/api/courses`;
+ const URL = `${process.env.REACT_APP_BASE_URL}/api/courses`;
  // const course = courses.find((course) => course._id === courseId);
  const { courseId } = useParams();
  const [ setCourse] = useState({});
