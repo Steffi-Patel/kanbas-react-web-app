@@ -45,11 +45,12 @@ function WorkingWithArrays() {
       const response = await axios.get(API);
       setTodos(response.data);
     };
-    async (todo) => {
-        const response = await axios
-          .get(`${API}/${todo.id}/delete`);
-        setTodos(response.data);
-      };
+
+   // const removeTodo = async (todo) => {
+   //     const response = await axios
+   //       .get(`${API}/${todo.id}/delete`);
+   //     setTodos(response.data);
+   //   };
     const createTodo = async () => {
     const response = await axios.get(`${API}/create`);
     setTodos(response.data);
