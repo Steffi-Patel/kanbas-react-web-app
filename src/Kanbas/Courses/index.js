@@ -7,21 +7,30 @@ import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
-function Courses({ courses }) {
-  const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
-    
+function Courses({}) {
 
-  if (!course) {
-    return <div>Course not found</div>;
-  }
+const URL = `${process.env.REACT_APP_BASE_URL}/api/courses`;
+ // const course = courses.find((course) => course._id === courseId);
+ const { courseId } = useParams();
+ const [course, setCourse] = useState({});
+ const findCourseById = async (courseId) => {
+   const response = await axios.get(
+     `${URL}/${courseId}`
+   );
+   setCourse(response.data);
+ };
+ useEffect(() => {
+   findCourseById(courseId);
+ }, [courseId]);
 
   return (
     <div className="wd-flex-row-container">
       
       <div className="wd-secondbar">
-        <CourseNavigation />
+        <CourseNavigation courseId={courseId} />
       </div>
       <div className="d-flex">
     <Routes>

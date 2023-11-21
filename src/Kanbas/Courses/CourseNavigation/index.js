@@ -8,6 +8,7 @@ function CourseNavigation() {
 
   const { courseId } = useParams();
   const { pathname } = useLocation();
+  
 
   return (
     <div className="d-flex-col" style={{ width: 125}}>
@@ -17,11 +18,14 @@ function CourseNavigation() {
                 </span>
         </li>
 
-      {links.map((link, index) => (
+        {links.map((link, index) => (
         <Link
           key={index}
-          to={`/Kanbas/Courses/${courseId}/${link}`}
-          className={`${pathname.includes(link) && "acitve"}`}>
+          to={`/Kanbas/Courses/${courseId}/${link.replace(" ", "")}`}
+          className={`list-group-item kanbas-nav-list-item ${
+            pathname.includes(link.replace(" ", "")) ? "kanbas-nav-active" : ""
+          }`}
+        >
           {link}
         </Link>
       ))}
