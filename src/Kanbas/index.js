@@ -24,7 +24,7 @@ function Kanbas() {
     axios.get(URL)
       .then(response => setCourses(response.data))
       .catch(error => console.error('Error fetching courses:', error));
-  }, []);
+  }, );
 
   const addNewCourse = async (newCourse) => {
     try {

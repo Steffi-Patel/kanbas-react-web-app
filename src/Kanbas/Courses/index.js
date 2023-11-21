@@ -1,6 +1,6 @@
 // Courses.js
 import React from "react";
-import db from "../../Kanbas/Database";
+
 import { Routes, Route, useParams, Navigate} from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
@@ -11,20 +11,21 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 function Courses({}) {
-
-const URL = `${process.env.REACT_APP_BASE_URL}/api/courses`;
+  const URL = `${process.env.REACT_APP_BASE_URL}/api/courses`;
  // const course = courses.find((course) => course._id === courseId);
  const { courseId } = useParams();
- const [course, setCourse] = useState({});
+ const [ setCourse] = useState({});
+
  const findCourseById = async (courseId) => {
    const response = await axios.get(
      `${URL}/${courseId}`
    );
    setCourse(response.data);
  };
+
  useEffect(() => {
    findCourseById(courseId);
- }, [courseId]);
+ }, [courseId, findCourseById]);
 
   return (
     <div className="wd-flex-row-container">
