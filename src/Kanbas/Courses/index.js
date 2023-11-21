@@ -10,7 +10,7 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-function Courses({}) {
+function Courses() {
   const URL = `${process.env.REACT_APP_BASE_URL}/api/courses`;
  // const course = courses.find((course) => course._id === courseId);
  const { courseId } = useParams();
@@ -25,7 +25,7 @@ function Courses({}) {
 
  useEffect(() => {
    findCourseById(courseId);
- }, [courseId, findCourseById]);
+ }, [courseId, URL]);
 
   return (
     <div className="wd-flex-row-container">

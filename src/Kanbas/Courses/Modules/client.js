@@ -2,8 +2,7 @@ import axios from "axios";
 const COURSES_URL = `${process.env.REACT_APP_BASE_URL}/courses`;
 const MODULES_URL = `${process.env.REACT_APP_BASE_URL}/modules`;
 export const updateModule = async (module) => {
-  const response = await axios.
-    put(`${MODULES_URL}/${module._id}`, module);
+  const response = await axios.put(`${MODULES_URL}/${module._id}`, module);
   return response.data;
 };
 
