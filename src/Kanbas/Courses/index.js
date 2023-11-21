@@ -16,17 +16,25 @@ function Courses() {
  const { courseId } = useParams();
  const [ setCourse] = useState({});
 
- const findCourseById = async (courseId) => {
-   const response = await axios.get(
-     `${URL}/${courseId}`
-   );
-   setCourse(response.data);
- };
+// const findCourseById = async (courseId) => {
+//   const response = await axios.get(
+  //   `${URL}/${courseId}`
+   //);
+  // setCourse(response.data);
+ //};
 
+ //useEffect(() => {
+   //findCourseById(courseId);
+ //}, [courseId, URL, findCourseById]);
+ 
  useEffect(() => {
-   findCourseById(courseId);
- }, [courseId, URL, findCourseById]);
+  const findCourseById = async () => {
+    const response = await axios.get(`${URL}/${courseId}`);
+    setCourse(response.data);
+  };
 
+  findCourseById();
+}, [courseId, URL]);
   return (
     <div className="wd-flex-row-container">
       
