@@ -26,7 +26,7 @@ function Courses() {
  //useEffect(() => {
    //findCourseById(courseId);
  //}, [courseId, URL, findCourseById]);
- 
+
  useEffect(() => {
   const findCourseById = async () => {
     const response = await axios.get(`${URL}/${courseId}`);
@@ -34,7 +34,7 @@ function Courses() {
   };
 
   findCourseById();
-}, [courseId, URL]);
+}, [courseId, URL,setCourse]);
   return (
     <div className="wd-flex-row-container">
       
