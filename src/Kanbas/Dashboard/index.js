@@ -30,7 +30,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse, deleteCourse, upd
             value={course.endDate} 
             onChange={(e) => setCourse({ ...course, endDate: e.target.value })}
         />
-        <button onClick={addNewCourse} className="btn btn-primary">Add</button>
+        <button onClick={() => addNewCourse(course)} className="btn btn-primary">Add</button>
         <button onClick={updateCourse} className="btn btn-secondary">Update</button>
       </div>
       <div className="list-group">

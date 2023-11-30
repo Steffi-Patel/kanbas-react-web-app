@@ -17,14 +17,24 @@ function Kanbas() {
   });
 
  //const URL = "http://localhost:4000/api/courses";
-  const URL = `${process.env.REACT_APP_BASE_URL}/courses`;
+  //const URL = `${process.env.REACT_APP_BASE_URL}/courses`;
 
   // Fetch courses from server
+ // useEffect(() => {
+  //  axios.get(URL)
+    //  .then(response => setCourses(response.data))
+     // .catch(error => console.error('Error fetching courses:', error));
+ // }, []);
+
+ const URL = "http://localhost:4000/api/courses";
+  const findAllCourses = async () => {
+    const response = await axios.get(URL);
+    setCourses(response.data);
+  };
   useEffect(() => {
-    axios.get(URL)
-      .then(response => setCourses(response.data))
-      .catch(error => console.error('Error fetching courses:', error));
+    findAllCourses();
   }, []);
+
 
   const addNewCourse = async (newCourse) => {
     try {

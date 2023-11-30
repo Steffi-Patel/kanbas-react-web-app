@@ -1,5 +1,7 @@
 import axios from "axios";
-const COURSES_URL = `${process.env.REACT_APP_BASE_URL}/courses`;
+//const COURSES_URL = `${process.env.REACT_APP_BASE_URL}/courses`;
+const COURSES_URL = "http://localhost:4000/api/courses";
+
 const MODULES_URL = `${process.env.REACT_APP_BASE_URL}/modules`;
 export const updateModule = async (module) => {
   const response = await axios.
